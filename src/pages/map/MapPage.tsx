@@ -5,6 +5,7 @@ import '../../styles/Map/MapPage.css'
 
 function MapPage() {
     const [clickedLatLng, setClickedLatLng] = useState(null);
+    const [local, setLocal] = useState({ lat: -22.748030, lng: -42.897633 });
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
@@ -18,11 +19,7 @@ function MapPage() {
           };
 
         setClickedLatLng(latLng);
-
-        console.log(clickedLatLng)
     }
-
-    const local = { lat: -22.748030, lng: -42.897633 };
 
     return  (
         <div className='map'>
